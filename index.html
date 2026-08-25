@@ -38,28 +38,45 @@
         <!-- ① 飛ぶためのボタン（目次） -->
 <ul>ショートカット
     <li><a href="#profile-section">略歴</a></li>
-    <li><a href="#conntact-section">conntact</a></li>
+    <li><a href="#contact-section">contact</a></li>
 </ul>
 <!-- 間のスペース（画面を縦に長くするためのダミー文章） -->
 <p style="margin-bottom: 800px;">（スクロールが必要な長い文章やコンテンツ...）</p>
     </header>
 
-    <!-- 📝 mainタグ：ここから下に自分の紹介や作品などの本文を書いていきます -->
-    <main>
+     <!-- 📝 mainタグ：ここから下に自分の紹介や作品などの本文を書いていきます -->
+<main>
         <h2>Welcome to My Portfolio</h2>
-        <p>これからここにHTMLを組み立てて、自分だけのWebサイトを作っていきます！</p>
-        <!-- ② 飛び先の目印（idを設定する） -->
+        <!-- ① 日付を表示させるための空っぽの枠（idをつけておく） -->
+    <p>最終更新日：<span id="last-update">読み込み中...</span></p>
+
+    <!-- ② 自動で日付を書き換えるJavaScriptのプログラム -->
+    <script>
+    // このページの最終更新データをMac（ブラウザ）から取得する
+    const lastModified = new Date(document.lastModified);
+    
+    // 日付の見た目を「2026年08月25日」のような日本の形式に整える
+    const year = lastModified.getFullYear();
+    const month = String(lastModified.getMonth() + 1).padStart(2, '0');
+    const day = String(lastModified.getDate()).padStart(2, '0');
+    const hours = String(lastModified.getHours()).padStart(2, '0');
+    const minutes = String(lastModified.getMinutes()).padStart(2, '0');
+    const seconds = String(lastModified.getSeconds()).padStart(2, '0');
+    
+    // ①で作った「last-update」というidの場所に、整えた日付を自動で流し込む
+    document.getElementById('last-update').textContent = `${year}/${month}/${day}/${hours}:${minutes}:${seconds}`;
+    </script>
         <h3 id="profile-section">略歴</h3>
     <ul>
         <li>2019年:<a href="https://www.olc.co.jp/ja/index.html" target="blank" rel="noopener noreferrer">株式会社オリエンタルランド</a>入社 </li>
         <li>2024年:<a href=" https://ktvace.co.jp/" target="blank" rel="noopener noreferrer">株式会社 KT VACE</a> インターンシップに従事</li>
-        <li>2026年:<a href="https://www.meikai.ac.jp" target="blank" rel="noopener noreferrer">明海大学 卒業</a></li>
-        <li>2026年:<a href="https://www.starbucks.co.jp/" target="blank" rel="noopener noreferrer">スターバックスジャパン株式会社 入社</a></li>
+        <li>2026年:<a href="https://www.meikai.ac.jp" target="blank" rel="noopener noreferrer">明海大学</a>卒業</li>
+        <li>2026年:<a href="https://www.starbucks.co.jp/" target="blank" rel="noopener noreferrer">スターバックスジャパン株式会社</a>入社</li>
     </ul>
-        <h4 id="conntact-section">conntact</h4>
+        <h4 id="contact-section">contact</h4>
         <p><a href="https://www.facebook.com/profile.php?id=61555697223499" target="blank" rel="noopener noreferrer">Facebook</a></p>
         </a>
-    </main>
+</main>
 
 </body>
 </html>
