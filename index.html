@@ -1,10 +1,47 @@
-<html>
-    <header>
-        
-    </header>
-    <head>
-        <title>My Portfolio</title>
-        <body>
-            <h1>Welcome to Yusuke.U's Portfolio</h1>
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <!-- ⚠️【超重要】これが表示する端末ごとに画面サイズを自動で合わせる魔法の一行です（ビューポート設定） -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    
+    <style>
+        /* 簡単なデザイン（CSS）をここに書いておきます */
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: sans-serif;
+            /* 画面全体の最大サイズ（100%）に合わせる設定 */
+            width: 100%;
+            box-sizing: border-box;
+        }
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+        main {
+            padding: 20px;
+            max-width: 1200px; /* パソコンで見た時に横に広がりすぎないようにする限界値 */
+            margin: 0 auto;    /* 画面の真ん中に寄せる設定 */
+        }
+    </style>
+</head>
+<body>
 
-        </body>
+    <!-- 🧱 headerタグ：サイトの最上部に表示されるメニューやタイトルを入れる場所 -->
+    <header>
+        <h1>Yusuke.U's Portfolio</h1>
+        <p>ここにナビゲーションメニューなどを今後作っていきます</p>
+    </header>
+
+    <!-- 📝 mainタグ：ここから下に自分の紹介や作品などの本文を書いていきます -->
+    <main>
+        <h2>Welcome to My Portfolio</h2>
+        <p>これからここにHTMLを組み立てて、自分だけのWebサイトを作っていきます！</p>
+    </main>
+
+</body>
+</html>
