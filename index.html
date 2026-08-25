@@ -17,7 +17,7 @@
             box-sizing: border-box;
         }
         header {
-            background-color: #333;
+            background-color: #666;
             color: #fff;
             padding: 20px;
             text-align: center;
@@ -33,22 +33,30 @@
 
     <!-- 🧱 headerタグ：サイトの最上部に表示されるメニューやタイトルを入れる場所 -->
     <header>
-        <h1>Yusuke.U's Portfolio</h1>
+        <h1>Portfolio</h1>
         <p>これまでの経験や現在の取り組みを可視化していきます</p>
+        <!-- ① 飛ぶためのボタン（目次） -->
+<ul>ショートカット
+    <li><a href="#profile-section">略歴</a></li>
+    <li><a href="#conntact-section">conntact</a></li>
+</ul>
+<!-- 間のスペース（画面を縦に長くするためのダミー文章） -->
+<p style="margin-bottom: 800px;">（スクロールが必要な長い文章やコンテンツ...）</p>
     </header>
 
     <!-- 📝 mainタグ：ここから下に自分の紹介や作品などの本文を書いていきます -->
     <main>
         <h2>Welcome to My Portfolio</h2>
         <p>これからここにHTMLを組み立てて、自分だけのWebサイトを作っていきます！</p>
-        <h3>略歴</h3>
+        <!-- ② 飛び先の目印（idを設定する） -->
+        <h3 id="profile-section">略歴</h3>
     <ul>
-        <li>2019年:株式会社オリエンタルランド 入社</li>
-        <li>2024年:株式会社 KT VACE インターンシップに従事</li>
-        <li>2026年:明海大学 卒業</li>
-        <li>2026年:スターバックスジャパン株式会社 入社</li>
+        <li>2019年:<a href="https://www.olc.co.jp/ja/index.html" target="blank" rel="noopener noreferrer">株式会社オリエンタルランド</a>入社 </li>
+        <li>2024年:<a href=" https://ktvace.co.jp/" target="blank" rel="noopener noreferrer">株式会社 KT VACE</a> インターンシップに従事</li>
+        <li>2026年:<a href="https://www.meikai.ac.jp" target="blank" rel="noopener noreferrer">明海大学 卒業</a></li>
+        <li>2026年:<a href="https://www.starbucks.co.jp/" target="blank" rel="noopener noreferrer">スターバックスジャパン株式会社 入社</a></li>
     </ul>
-        <h4>conntact</h4>
+        <h4 id="conntact-section">conntact</h4>
         <p><a href="https://www.facebook.com/profile.php?id=61555697223499" target="blank" rel="noopener noreferrer">Facebook</a></p>
         </a>
     </main>
